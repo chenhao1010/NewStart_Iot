@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MQTT_Iot_Test_Dome</title>
+    <script src="js/mqttws31.js" type="text/javascript"></script>
+    <script src="js/config.js" type="text/javascript"></script>
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="head-logo">
+        <img class="head-img" src="img/logo.png" alt="IOT">
+        <p id="head-time"></p>
+    </div>
+    <h3>Switch</h3>
+    <div class="vessel">
+        <div class="switch-list">
+            <p>小卧室灯</p>
+            <!--隐藏的input用来获取判断的值-->
+            <input type="hidden" id="num-1" value="off" />
+            <!-- 定义 dom，包含 2 个元素，分别代表 input 控件、开关 -->
+            <!-- 把 input 控件设置为 checked状态，以便设置处于 on 状态的样式 -->
+            <input type="checkbox" checked="checked" class="toggle" id="sw-1" onclick='send(click_val("num-1"), click_id(this));'>
+            <div class="switch"></div>
+        </div>
+        <div class="switch-list">
+            <p>书桌台灯</p>
+            <input type="hidden" id="num-2" value="off" />
+            <input type="checkbox" checked="checked" class="toggle" id="sw-2" onclick='send(click_val("num-2"), click_id(this));'>
+            <div class="switch"></div>
+        </div>
+        <div class="switch-list">
+            <p>餐厅灯</p>
+            <input type="hidden" id="num-3" value="off" />
+            <input type="checkbox" checked="checked" class="toggle" id="sw-3" onclick='send(click_val("num-3"), click_id(this));'>
+            <div class="switch"></div>
+        </div>
+        <div class="switch-list">
+            <p>厨房灯</p>
+            <input type="hidden" id="num-4" value="off" />
+            <input type="checkbox" checked="checked" class="toggle" id="sw-4" onclick='send(click_val("num-4"), click_id(this));'>
+            <div class="switch"></div>
+        </div>
+        <div class="switch-list">
+                <p>客厅灯</p>
+                <input type="hidden" id="num-5" value="off" />
+            <input type="checkbox" checked="checked" class="toggle" id="sw-5" onclick='send(click_val("num-5"), click_id(this));'>
+            <div class="switch"></div>
+        </div>
+    </div>
+    <h3>Temperature</h3>
+    <div class="vessel">
+        <div id="temp-1" class="temp"></div>
+        <div id="temp-2" class="temp"></div>
+    </div>
+    <h3>Humidity</h3>
+    <div class="vessel">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
