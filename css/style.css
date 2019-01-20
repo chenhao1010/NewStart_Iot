@@ -62,9 +62,13 @@ h3 {
     font-weight: bold
 }
 
-.temp {
+.temp, .hum{
     height: 200px;
     width: 150px;
+}
+
+text, tspan {
+    font-size: 14px;
 }
 /* 定义控件的样式，把控件的设置为透明，使其不可见，但仍可与用户交互。其中字号大小是变量，因为 input 控件的字号与正文字号不同，所以需要单独设置 */
 :root {
