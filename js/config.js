@@ -1,12 +1,12 @@
 var hostname = 'www.chenhao-home.cn',
     port = 8083,
-    clientId = nd_num(12),
+    clientId = rnd_num(12),
     timeout = 5,
     keepAlive = 100,
     cleanSession = false,
     ssl = false,
     userName = 'chenhao',  
-    password = '***************',  
+    password = '*******************',  
     topic = '/led';
 
 //定时器
